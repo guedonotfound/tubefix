@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Tubefix",
+  "version": "0.1.0",
+  "description": "YouTube do seu jeito: sem cards, sem legendas, qualidade máxima, modo teatro e descrição expandida.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["main.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["hide.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

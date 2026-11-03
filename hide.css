@@ -1,0 +1,17 @@
+/* Cards and in-video popups. If YouTube renames something, fix it here. */
+
+/* Info cards ("i" button and the teaser that slides in) */
+.ytp-cards-button,
+.ytp-cards-teaser,
+
+/* End screen elements (video/channel/link boxes over the last seconds) */
+.ytp-ce-element,
+
+/* Product and "suggested action" popups */
+.ytp-suggested-action,
+.ytp-featured-product {
+  display: none !important;
+}
+
+/* Optional: channel watermark in the corner. Uncomment to hide it too. */
+/* .iv-branding { display: none !important; } */
