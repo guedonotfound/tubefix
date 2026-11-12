@@ -133,6 +133,14 @@
     }
   }
 
+  // YouTube keeps the same <video> element alive across navigations,
+  // so PiP survives leaving the watch page. Close it when that happens.
+  function exitPip() {
+    if (document.pictureInPictureElement) {
+      document.exitPictureInPicture().catch(() => {});
+    }
+  }
+
   // ---------- per-video flow ----------
 
   let handledVideoId = null;
@@ -166,6 +174,7 @@
     const id = currentVideoId();
     if (!id) {
       handledVideoId = null;
+      exitPip();
       return;
     }
     if (id === handledVideoId) return;

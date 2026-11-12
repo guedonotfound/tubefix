@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tubefix",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "YouTube do seu jeito: sem cards, sem legendas, áudio original, qualidade máxima, modo teatro e descrição expandida.",
   "content_scripts": [
     {
